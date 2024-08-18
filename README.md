@@ -36,5 +36,5 @@ https://drive.google.com/file/d/1WZrQUj15Iowj05EKwfIYdHpPzHPFjO0N/view?usp=drive
 
 ## Screenshots
 
-![App Screenshot]([https://drive.google.com/file/d/1YUxJBc3CTqbQz0pGDo93LUGWAkYZSayy/view?usp=drivesdk](https://drive.google.com/drive/folders/1WvKtzJ1lO63bsyAZssMyNYPJg4_Hy_t2))
+![App Screenshot](https://drive.google.com/file/d/1X-PRX5kgsrmlHgSRQAWFK4g6QPAYGCoc/view?usp=drive_link)
 
