@@ -31,7 +31,8 @@ organization as per his requirements.
 https://drive.google.com/file/d/1WZrQUj15Iowj05EKwfIYdHpPzHPFjO0N/view?usp=drivesdk
 
 
-![Logo](https://drive.google.com/file/d/1YUxJBc3CTqbQz0pGDo93LUGWAkYZSayy/view?usp=drivesdk)
+![Logo](![IMG-20240530-WA0002](https://github.com/user-attachments/assets/abbcc1d3-84d4-4e33-9b76-21f51ac2fadd)
+)
 
 
 ## Screenshots
