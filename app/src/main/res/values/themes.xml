@@ -1,0 +1,87 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ProjectOne" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="android:statusBarColor">@color/blue</item>
+    </style>
+
+    <style name="Theme.ProjectOne" parent="Base.Theme.ProjectOne" />
+
+
+
+    <style name="cut_style_bottom">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">20dp</item>
+        <item name="backgroundColor">@color/white</item>
+
+    </style>
+
+
+    <style name="cut_style">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">12dp</item>
+
+    </style>
+
+
+    <style name="smooth_profile">
+        <item name="cardCornerRadius">100dp</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">100dp</item>
+        <item name="color">@color/black</item>
+    </style>
+
+
+
+
+    <style name="smooth">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">10dp</item>
+    <item name="color">@color/white</item>
+    </style>
+
+
+<!--    <style name="CustomBottomNavigationActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">-->
+<!--        <item name="android:width">8dp</item>-->
+<!--        <item name="android:height">2dp</item>-->
+<!--        <item name="android:background">@color/black</item>-->
+<!--        <item name="iconTint">@color/white</item>-->
+<!--        -->
+<!--    </style>-->
+
+
+    <style name="customstyleofactiveindicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/white</item>
+
+    </style>
+
+<style name="smoothCard">
+    <item name="cardElevation">10dp</item>
+    <item name="cardCornerRadius">5dp</item>
+    <item name="cornerSize">50dp</item>
+    <item name="color">@color/white</item>
+    <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="toolbarsubtitleTextStyle" parent="TextAppearance.Material3.ActionBar.Subtitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">19sp</item>
+        <item name="fontFamily">@font/inter_bold</item>
+
+    </style>
+
+    <style name="BottomSheetStyles" parent="Widget.Design.BottomSheet.Modal">
+        <item name="background">@color/transparent</item>
+    </style>
+
+<style name="customBottomSheetDialog" parent="Theme.Material3.Light.BottomSheetDialog">
+    <item name="bottomSheetStyle">
+        @style/BottomSheetStyles
+    </item>
+</style>
+
+
+
+</resources>

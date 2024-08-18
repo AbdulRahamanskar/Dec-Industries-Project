@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImagePreviewActivity"
+    android:background="@color/settings_bgcolor"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:subtitle=""
+        app:title=""
+        android:id="@+id/imagePreviewToolbar"
+        android:background="@color/settings_bgcolor"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/sample_logo"
+        android:layout_marginBottom="16dp"
+        app:shapeAppearanceOverlay="@style/smooth"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"/>
+    <ImageButton
+        android:id="@+id/removeImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_delete_forever_24"
+        android:background="@color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="60dp"
+        app:tint="@color/red" />
+</RelativeLayout>

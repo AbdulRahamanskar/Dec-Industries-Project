@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/salesHeadProjectsMenu"
+        android:title=""
+        android:icon="@drawable/baseline_computer_24"/>
+
+    <item android:id="@+id/salesHeadProfileMenu"
+        android:title=""
+        android:icon="@drawable/baseline_account_circle_24"/>
+
+    <item android:id="@+id/salesHeadSettingsMenu"
+        android:title=""
+        android:icon="@drawable/baseline_settings_24"/>
+
+
+</menu>

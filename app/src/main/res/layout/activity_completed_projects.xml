@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/settings_bgcolor"
+    tools:context=".admin.CompletedProjects">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarCompletedProjects"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        app:title=""
+        app:subtitle="Completed Projects"
+        app:subtitleTextColor="@color/white"
+        app:subtitleTextAppearance="@style/toolbarsubtitleTextStyle"
+        android:layout_alignParentTop="true" />
+
+    <ListView
+
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarCompletedProjects"
+        android:divider="@color/white"
+        tools:listitem="@layout/update_order_status_list"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        android:id="@+id/adminOrderStatusUpdateCompletedListView"/>
+
+
+</RelativeLayout>

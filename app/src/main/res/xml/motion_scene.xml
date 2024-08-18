@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetStart="@+id/start"
+        app:constraintSetEnd="@+id/end"
+        app:duration="1000">
+
+        <KeyTrigger
+            app:framePosition="0"
+            app:motionTarget="@id/ivLogo">
+            <OnLoad />
+        </KeyTrigger>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@id/ivLogo">
+            <PropertySet
+                android:alpha="1.0"
+                android:scaleX="1.0"
+                android:scaleY="1.0" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/ivLogo">
+            <PropertySet
+                android:alpha="0.0"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+        </Constraint>
+    </ConstraintSet>
+
+</MotionScene>

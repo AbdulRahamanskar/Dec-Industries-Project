@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginScreen"
+    android:orientation="vertical"
+    android:background="@color/app_bgcolor">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logodec"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="centerCrop"
+            android:transitionName="splash_logo_transition"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/custom_bottom_sheet">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:fontFamily="@font/inter_bold"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:transitionName="tvlogintransition"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginTop="25sp"/>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tilEmail"
+                android:hint="Email"
+                android:transitionName="transition_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:boxStrokeWidth="2dp"
+                android:textColorHint="@color/white"
+                app:startIconScaleType="centerCrop"
+                app:boxStrokeErrorColor="@color/red"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:startIconMinSize="24dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:hintAnimationEnabled="true"
+                app:errorTextColor="@color/white"
+                android:backgroundTint="@color/white"
+                app:boxStrokeColor="@color/blue"
+                android:foregroundTint="@color/white"
+                app:hintTextColor="@color/white"
+                app:placeholderTextColor="@color/white"
+                app:cursorColor="@color/white"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/etEmail"
+                    android:inputType="textEmailAddress"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/white"
+                    android:textColor="@color/white"
+                    android:drawableStart="@drawable/baseline_email_24"
+                    android:backgroundTint="@color/white"
+                    android:foregroundTint="@color/white"
+                    android:cursorVisible="true"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:id="@+id/tilPassword"
+                android:transitionName="transition_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:startIconMinSize="24dp"
+                app:passwordToggleTint="@color/white"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                android:textColorHint="@color/white"
+                android:backgroundTint="@color/white"
+                app:boxStrokeColor="@color/blue"
+                android:foregroundTint="@color/white"
+                app:placeholderTextColor="@color/white"
+                app:hintTextColor="@color/white"
+                app:errorTextColor="@color/red"
+                app:cursorColor="@color/white"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/etPassword"
+                    android:inputType="textPassword"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/white"
+                    android:drawableTint="@color/white"
+                    android:drawableStart="@drawable/baseline_lock_24"
+                    android:backgroundTint="@color/white"
+                    android:cursorVisible="true"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/tvForgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="35dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_bold"
+                android:textSize="16dp"
+                android:transitionName="forgotPassword_transition"
+                android:gravity="center_horizontal"
+                android:text="Forgot Password"
+                android:textColor="@color/white" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnLogin"
+                        android:text="Login"
+                        android:elevation="10dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_bg"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="35dp"/>
+
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="@color/white"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="70dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="70dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    android:text="Are You A Client Then?" />
+
+                <TextView
+                    android:id="@+id/tvSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginStart="7dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/inter_bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:text="Sign Up"/>
+            </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginStart="10dp">-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvClientTemp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:layout_marginStart="7dp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:fontFamily="@font/inter_bold"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text="Client"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvSalesHeadTemp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:layout_marginStart="7dp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:fontFamily="@font/inter_bold"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:text="SalesHead"/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tvManufacturerTemp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:layout_marginStart="7dp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:fontFamily="@font/inter_bold"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:text="Manufacturer"/>-->
+<!--            </LinearLayout>-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

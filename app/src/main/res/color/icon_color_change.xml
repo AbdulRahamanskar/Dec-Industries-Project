@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Active indicator color -->
+    <item android:color="@color/blue" android:state_checked="true" />
+
+    <!-- Selected icon color -->
+    <item android:color="@color/white" android:state_checked="true" />
+
+    <!-- Default inactive state -->
+    <item android:color="@color/white" />
+</selector>

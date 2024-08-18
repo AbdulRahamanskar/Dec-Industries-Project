@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/settings_bgcolor"
+    tools:context=".admin.AdminProjects">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/AdminToolbarOrdersLists"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        app:subtitle="Projects"
+        app:subtitleTextColor="@color/white"
+        app:subtitleTextAppearance="@style/toolbarsubtitleTextStyle"
+        app:title=""
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/white"
+        android:background="@color/white"
+        tools:listitem="@layout/salespersonlistview"
+        android:layout_below="@id/AdminToolbarOrdersLists"
+        android:id="@+id/adminProjectsListView"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        />
+    </RelativeLayout>
+
+</LinearLayout>

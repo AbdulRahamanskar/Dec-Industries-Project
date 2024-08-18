@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DEC Industries</string>
+    <string name="lorem">Lorem ipsum is placeholder text commonly used in the graphic, print,
+        and publishing industries for previewing layouts and visual mockups.
+
+</string>
+    <string name="wave_path">M0,100 L0,0 L100,0 Q50,50 100,100 Z</string>
+
+</resources>

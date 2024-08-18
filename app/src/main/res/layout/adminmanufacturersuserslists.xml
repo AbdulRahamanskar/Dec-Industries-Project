@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/settings_bgcolor"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="20dp"
+    android:layout_marginTop="25dp"
+    style="@style/Widget.Material3.CardView.Outlined">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="7dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/adminManufacturerProfileImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/sample_logo"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:shapeAppearanceOverlay="@style/smooth"
+                    android:scaleType="centerCrop"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/adminManufacturerFullName"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sales Person Name"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:fontFamily="@font/inter_bold"
+                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"
+                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/adminManufacturerRole"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Role"
+                            android:layout_marginStart="5dp"
+
+                            android:fontFamily="@font/inter_bold"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/adminManufacturerEmpId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Emp Id"
+
+                        android:fontFamily="@font/inter_bold"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="4dp"/>
+                    <TextView
+                        android:id="@+id/adminManufacturerEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/inter_bold"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="4dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/adminManufacturerDoj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Joined On:"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/inter_bold"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/adminManufacturerDeleteImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:src="@drawable/baseline_delete_24"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"
+            app:shapeAppearanceOverlay="@style/smooth_profile"
+            android:scaleType="centerCrop"
+            android:padding="5dp"
+            />
+
+
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/adminManufacturerCallImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_call_24"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="15dp"
+        app:shapeAppearanceOverlay="@style/smooth"
+        android:scaleType="centerCrop"
+        android:background="@color/transparent"
+        android:padding="5dp"
+        />
+
+
+
+
+
+</androidx.cardview.widget.CardView>

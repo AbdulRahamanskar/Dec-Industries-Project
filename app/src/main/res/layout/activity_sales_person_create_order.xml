@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/settings_bgcolor"
+    tools:context=".salesperson.SalesPersonCreateOrder">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        android:id="@+id/sales_toolbar"
+        app:title=""
+        app:subtitle="Create Order"
+        android:gravity="center"
+        app:subtitleTextColor="@color/white"
+        app:subtitleTextAppearance="@style/toolbarsubtitleTextStyle"/>
+    <ScrollView
+        android:layout_below="@id/sales_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        android:background="@color/settings_bgcolor"
+        android:layout_above="@id/salesPersonBottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Your form fields go here -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer Info"
+                android:textSize="20sp"
+                android:fontFamily="@font/inter_bold"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="22dp" />
+
+            <!-- Add your TextInputLayouts and other views here -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCustomerId"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:gravity="center"
+                android:hint="ClientId"
+                android:textColorHint="@color/light_black"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/light_black"
+                app:errorTextColor="@color/red"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/light_black"
+                app:placeholderTextColor="@color/blue"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:helperTextEnabled="true"
+                app:helperText="Enter the correct client ID to retrieve the client's details"
+                app:helperTextTextColor="@color/light_black"
+                app:startIconMinSize="24dp"
+                app:startIconScaleType="centerCrop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCreateOrderSalesCustomerId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/light_black"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/baseline_badge_24"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/light_black"
+                    android:foregroundTint="@color/light_black"
+                    android:inputType="text"
+                    android:textColor="@color/light_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCustomerName"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="5dp"
+                app:boxStrokeWidth="2dp"
+                android:hint="Customer Full Name"
+
+                app:boxStrokeColor="@color/blue"
+                app:hintTextColor="@color/light_black"
+                app:hintTextAppearance="@color/transparent"
+                android:textColorHint="@color/light_black"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/atvCreateOrderSalesCustomerName"
+
+                    android:textColorHint="@color/light_black"
+                    android:drawableStart="@drawable/baseline_person_4_24"
+                    android:drawableTint="@color/light_black"
+                    android:drawablePadding="5dp"
+                    android:inputType="textAutoComplete"
+                    android:textColor="@color/light_black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCustomerMobileNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:gravity="center"
+                android:hint="Customer Mobile Number"
+                android:textColorHint="@color/light_black"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/light_black"
+                app:errorTextColor="@color/red"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/light_black"
+                app:placeholderTextColor="@color/blue"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:startIconMinSize="24dp"
+                app:counterTextAppearance="@color/light_black"
+                app:counterEnabled="true"
+                app:counterOverflowTextColor="@color/red"
+                app:counterTextColor="@color/light_black"
+                app:counterOverflowTextAppearance="@color/red"
+                app:counterMaxLength="10"
+                app:startIconScaleType="centerCrop"
+                app:prefixText="+91 "
+                app:prefixTextColor="@color/light_black"
+                app:prefixTextAppearance="@color/light_black"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCreateOrderSalesCustomerMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/light_black"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/baseline_smartphone_24"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/light_black"
+                    android:foregroundTint="@color/light_black"
+                    android:inputType="phone"
+                    android:textColor="@color/light_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCustomerEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:gravity="center"
+                android:hint="Customer Email"
+                android:textColorHint="@color/light_black"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/light_black"
+                app:errorTextColor="@color/red"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/light_black"
+                app:placeholderTextColor="@color/blue"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:startIconMinSize="24dp"
+                app:startIconScaleType="centerCrop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCreateOrderSalesCustomerEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/light_black"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/baseline_email_24"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/light_black"
+                    android:foregroundTint="@color/light_black"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/light_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCompanyName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:gravity="center"
+                android:hint="Company Name"
+                android:textColorHint="@color/light_black"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/light_black"
+                app:errorTextColor="@color/red"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/light_black"
+                app:placeholderTextColor="@color/blue"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:startIconMinSize="24dp"
+                app:startIconScaleType="centerCrop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCreateOrderSalesCompanyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/light_black"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/baseline_apartment_24"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/light_black"
+                    android:foregroundTint="@color/light_black"
+                    android:inputType="text"
+                    android:textColor="@color/light_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCustomerAddress"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:gravity="center"
+                android:hint="Customer Full Address"
+                android:textColorHint="@color/light_black"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/light_black"
+                app:errorTextColor="@color/red"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/light_black"
+                app:placeholderTextColor="@color/blue"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:startIconMinSize="24dp"
+                app:startIconScaleType="centerCrop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCreateOrderSalesCustomerAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/light_black"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/baseline_location_on_24"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/light_black"
+                    android:foregroundTint="@color/light_black"
+                    android:inputType="text"
+                    android:textColor="@color/light_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Details"
+                android:fontFamily="@font/inter_bold"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="7dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCustomerProductName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:gravity="center"
+                android:hint="Product Name or Code"
+                android:textColorHint="@color/light_black"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/light_black"
+                app:errorTextColor="@color/red"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/light_black"
+                app:placeholderTextColor="@color/blue"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:startIconMinSize="24dp"
+                app:startIconScaleType="centerCrop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCreateOrderSalesCustomerProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/light_black"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/baseline_shopping_bag_24"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/light_black"
+                    android:foregroundTint="@color/light_black"
+                    android:inputType="text"
+                    android:textColor="@color/light_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCustomerProductOrderQuantity"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:gravity="center"
+                android:hint="Order Quantity"
+                android:textColorHint="@color/light_black"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/light_black"
+                app:errorTextColor="@color/red"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/light_black"
+                app:placeholderTextColor="@color/blue"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:startIconMinSize="24dp"
+                app:startIconScaleType="centerCrop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCreateOrderSalesCustomerProductOrderQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/light_black"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/baseline_production_quantity_limits_24"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/light_black"
+                    android:foregroundTint="@color/light_black"
+                    android:inputType="text"
+                    android:textColor="@color/light_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCustomerProductDescription"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:hint="Product Description"
+                android:textColorHint="@color/light_black"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/light_black"
+                app:errorTextColor="@color/red"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/light_black"
+                app:placeholderTextColor="@color/blue"
+                app:startIconMinSize="24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCreateOrderSalesCustomerProductDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:backgroundTint="@color/light_black"
+                    android:cursorVisible="true"
+                    android:drawablePadding="5dp"
+                    android:inputType="textMultiLine"
+                    android:lines="6"
+                    android:minLines="6"
+                    android:scrollbars="vertical"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollHorizontally="false"
+                    android:overScrollMode="always"
+                    android:textColor="@color/light_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+        <ImageView
+
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/baseline_add_a_photo_24"
+            android:backgroundTint="@color/light_black"
+            android:id="@+id/ivUploadSampleImg"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Details"
+                android:fontFamily="@font/inter_bold"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/light_black"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="7dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCustomerProductOrderDate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:gravity="center"
+                android:hint="Order Date(DD/MM/YYYY)"
+                android:textColorHint="@color/light_black"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/light_black"
+                app:errorTextColor="@color/red"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/light_black"
+                app:placeholderTextColor="@color/blue"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:startIconMinSize="24dp"
+                app:startIconScaleType="centerCrop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCreateOrderSalesCustomerProductOrderDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/bottom_bg_color"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/baseline_calendar_month_24"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/light_black"
+                    android:foregroundTint="@color/bottom_bg_color"
+                    android:inputType="datetime"
+                    android:textColor="@color/light_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCustomerProductDueDate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:gravity="center"
+                android:hint="Due Date(DD/MM/YYYY)"
+                android:textColorHint="@color/light_black"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/light_black"
+                app:errorTextColor="@color/red"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/light_black"
+                app:placeholderTextColor="@color/blue"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:startIconMinSize="24dp"
+                app:startIconScaleType="centerCrop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCreateOrderSalesCustomerProductDueDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/bottom_bg_color"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/baseline_calendar_month_24"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/light_black"
+                    android:foregroundTint="@color/bottom_bg_color"
+                    android:inputType="datetime"
+                    android:textColor="@color/light_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCustomerProductBudget"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:gravity="center"
+                android:hint="Customer's Est buget"
+                android:textColorHint="@color/light_black"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/light_black"
+                app:errorTextColor="@color/red"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/light_black"
+                app:placeholderTextColor="@color/blue"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:startIconMinSize="24dp"
+                app:startIconScaleType="centerCrop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCreateOrderSalesCustomerEstProductBudget"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/bottom_bg_color"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/baseline_currency_rupee_24"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/light_black"
+                    android:foregroundTint="@color/bottom_bg_color"
+                    android:inputType="number"
+                    android:textColor="@color/light_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Information"
+                android:fontFamily="@font/inter_bold"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/light_black"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="7dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCustomerProductModeOfPayment"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:gravity="center"
+                android:hint="Mode of payment"
+                android:textColorHint="@color/light_black"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/light_black"
+                app:errorTextColor="@color/red"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/light_black"
+                app:placeholderTextColor="@color/blue"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:startIconMinSize="24dp"
+                app:startIconScaleType="centerCrop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCreateOrderSalesCustomerProductModeOfPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/bottom_bg_color"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/baseline_wallet_24"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/light_black"
+                    android:foregroundTint="@color/bottom_bg_color"
+                    android:inputType="text"
+                    android:textColor="@color/light_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCustomerProductPaymentStatus"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:gravity="center"
+                android:hint="Payment status"
+                android:textColorHint="@color/light_black"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/light_black"
+                app:errorTextColor="@color/red"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/light_black"
+                app:placeholderTextColor="@color/blue"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:startIconMinSize="24dp"
+                app:startIconScaleType="centerCrop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCreateOrderSalesCustomerProductPaymentStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/bottom_bg_color"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/baseline_receipt_24"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/light_black"
+                    android:foregroundTint="@color/bottom_bg_color"
+                    android:inputType="text"
+                    android:textColor="@color/light_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assigned Sales Person"
+                android:fontFamily="@font/inter_bold"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/light_black"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="7dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCustomerProductSalesPersonEmpId"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:gravity="center"
+                android:hint="Sales Person EmpId"
+                android:textColorHint="@color/light_black"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/light_black"
+                app:errorTextColor="@color/red"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/light_black"
+                app:placeholderTextColor="@color/blue"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:startIconMinSize="24dp"
+                app:startIconScaleType="centerCrop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCreateOrderSalesCustomerProductSalesPersonEmpId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/light_black"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/baseline_badge_24"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/light_black"
+                    android:foregroundTint="@color/light_black"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/light_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCreateOrderSalesCustomerProductSalesPersonName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/white"
+                android:foregroundTint="@color/white"
+                android:gravity="center"
+                android:hint="Name of Sales Person"
+                android:textColorHint="@color/light_black"
+                app:boxStrokeColor="@color/blue"
+                app:boxStrokeErrorColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="@color/light_black"
+                app:errorTextColor="@color/red"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/light_black"
+                app:placeholderTextColor="@color/blue"
+                app:shapeAppearanceOverlay="@style/cut_style"
+                app:startIconMinSize="24dp"
+                app:startIconScaleType="centerCrop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCreateOrderSalesCustomerProductSalesPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/light_black"
+                    android:cursorVisible="true"
+                    android:drawableStart="@drawable/baseline_person_4_24"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@color/light_black"
+                    android:foregroundTint="@color/light_black"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/light_black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/createOrderLodingBar"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSalesPersonCreateOrder"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/button_bg"
+                android:elevation="10dp"
+                android:text="Create Order"
+                android:textStyle="bold"
+                android:textColor="@color/blue" />
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/salesPersonBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:elevation="10dp"
+        app:elevation="10dp"
+        app:menu="@menu/salesperson_bottommenu"
+        app:backgroundTint="@color/blue"
+        app:itemIconTint="@color/icon_color_change"
+        app:itemTextColor="@color/white"
+        app:itemActiveIndicatorStyle="@style/customstyleofactiveindicator"
+        app:itemTextAppearanceActive="@style/Widget.Material3.BottomNavigationView.ActiveIndicator"
+        app:itemHorizontalTranslationEnabled="true"
+        app:itemIconSize="24dp"
+        app:itemRippleColor="@color/white"
+        app:itemTextAppearanceActiveBoldEnabled="true"
+        app:labelVisibilityMode="unlabeled" />
+
+
+
+        </RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue">#00BCD4</color>
+    <color name="green">#008000</color>
+    <color name="purple">#9C27B0</color>
+    <color name="light_purple">#62286C</color>
+    <color name="grey">#615C61</color>
+    <color name="app_bgcolor">#FBFBFB</color>
+    <color name="orange">#FF5722</color>
+    <color name="red">#F44336</color>
+    <color name="yellow">#FFC107</color>
+    <color name="dark_blue">#001AFF</color>
+    <color name="inactive_color">#5E4ECA</color>
+    <color name="bottom_bg_color">#432FBE</color>
+    <color name="very_light_blue">#265073</color>
+    <color name="bg_color">#1B023B</color>
+    <color name="light_black">#454545</color>
+    <color name="select_user_color">#D5FFFF</color>
+    <color name="settings_bgcolor">#F0F4F8</color>
+    <color name="settings_blue">#0000FF</color>
+    <color name="darker_gray">#aaa</color>
+    <color name="colorPrimary">#6200EE</color> <!-- Example for Primary Color -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Example for Primary Dark Color -->
+    <color name="colorAccent">#03DAC5</color> <!-- Example for Accent Color -->
+    <color name="colorOnPrimary">#FFFFFF</color> <!-- Example for Text Color on Primary -->
+    <color name="colorOnSecondary">#000000</color> <!-- Example for Text Color on Secondary -->
+
+</resources>

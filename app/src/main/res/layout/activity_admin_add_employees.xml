@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.AdminAddEmployees"
+    android:background="@color/settings_bgcolor"
+    android:id="@+id/rlAddEmp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_addemployees"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/blue"
+            app:subtitle="Add Employees"
+            app:subtitleTextColor="@color/white"
+            android:gravity="center_horizontal"
+            app:title=""
+
+            app:subtitleTextAppearance="@style/toolbarsubtitleTextStyle"
+
+            tools:ignore="NotSibling" />
+
+
+        <!-- Scrollable content area... -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/adminBottomNav"
+            android:layout_below="@id/toolbar_addemployees"
+            android:fillViewport="true"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="none"
+            android:background="@color/settings_bgcolor"
+            android:id="@+id/scrollView_addemp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:id="@+id/linearlayoutaddemp">
+
+                        <!-- Form fields go here -->
+
+                        <!-- Add TextInputLayouts and other views here -->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAddEmpFullName"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:backgroundTint="@color/white"
+                            android:gravity="center"
+                            android:hint="Full Name"
+                            android:textColorHint="@color/light_black"
+                            android:transitionName="transition_email"
+                            app:boxStrokeColor="@color/blue"
+                            app:boxStrokeErrorColor="@color/red"
+                            app:boxStrokeWidth="2dp"
+                            app:cursorColor="@color/light_black"
+                            app:errorTextColor="@color/white"
+                            app:hintAnimationEnabled="true"
+                            app:hintTextColor="@color/light_black"
+                            app:placeholderTextColor="@color/light_black"
+                            app:shapeAppearanceOverlay="@style/cut_style"
+                            app:startIconMinSize="24dp"
+                            app:startIconScaleType="centerCrop">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etAddEmpFullName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_person_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="textPersonName"
+                                    android:textColor="@color/light_black" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAddEmpEmail"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="0dp"
+                            android:backgroundTint="@color/white"
+                            android:foregroundTint="@color/white"
+                            android:gravity="center"
+                            android:hint="Email"
+                            android:textColorHint="@color/light_black"
+                            app:boxStrokeColor="@color/blue"
+                            app:boxStrokeErrorColor="@color/red"
+                            app:boxStrokeWidth="2dp"
+                            app:cursorColor="@color/light_black"
+                            app:errorTextColor="@color/white"
+                            app:hintAnimationEnabled="true"
+                            app:hintTextColor="@color/light_black"
+                            app:placeholderTextColor="@color/light_black"
+                            app:shapeAppearanceOverlay="@style/cut_style"
+                            app:startIconMinSize="24dp"
+                            app:startIconScaleType="centerCrop">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etAddEmpEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_email_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="textEmailAddress"
+                                    android:textColor="@color/light_black" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAddEmpPassword"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="0dp"
+                            android:backgroundTint="@color/white"
+                            android:foregroundTint="@color/white"
+                            android:gravity="center"
+                            android:hint="Password"
+                            android:textColorHint="@color/light_black"
+                            app:boxStrokeColor="@color/blue"
+                            app:boxStrokeErrorColor="@color/red"
+                            app:boxStrokeWidth="2dp"
+                            app:cursorColor="@color/light_black"
+                            app:errorTextColor="@color/white"
+                            app:hintAnimationEnabled="true"
+                            app:hintTextColor="@color/light_black"
+                            app:passwordToggleEnabled="true"
+                            app:passwordToggleTint="@color/light_black"
+                            app:placeholderTextColor="@color/light_black"
+                            app:shapeAppearanceOverlay="@style/cut_style"
+                            app:startIconMinSize="24dp"
+                            app:startIconScaleType="centerCrop">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etAddEmpPassword"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_lock_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="textPassword"
+                                    android:textColor="@color/light_black" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAddEmpMobile"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="0dp"
+                            android:backgroundTint="@color/white"
+                            android:foregroundTint="@color/white"
+                            android:gravity="center"
+                            android:hint="Mobile"
+                            android:textColorHint="@color/light_black"
+                            app:boxStrokeColor="@color/blue"
+                            app:boxStrokeErrorColor="@color/red"
+                            app:boxStrokeWidth="2dp"
+                            app:cursorColor="@color/light_black"
+                            app:errorTextColor="@color/red"
+                            app:hintAnimationEnabled="true"
+                            app:hintTextColor="@color/light_black"
+                            app:placeholderTextColor="@color/light_black"
+                            app:shapeAppearanceOverlay="@style/cut_style"
+                            app:startIconMinSize="24dp"
+                            app:startIconScaleType="centerCrop"
+                            app:counterEnabled="true"
+                            app:counterTextAppearance="@color/light_black"
+                            app:counterTextColor="@color/light_black"
+                            app:counterOverflowTextColor="@color/red"
+                            app:counterOverflowTextAppearance="@color/red"
+                            app:counterMaxLength="10"
+                            app:prefixText="+91 "
+                            app:prefixTextColor="@color/light_black"
+                            app:prefixTextAppearance="@color/light_black">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etAddEmpMobile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/bottom_bg_color"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_smartphone_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="phone"
+                                    android:textColor="@color/light_black" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAddEmpID"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="0dp"
+                            android:backgroundTint="@color/white"
+                            android:foregroundTint="@color/white"
+                            android:gravity="center"
+                            android:hint="Employee ID"
+                            android:textColorHint="@color/light_black"
+                            app:boxStrokeColor="@color/blue"
+                            app:boxStrokeErrorColor="@color/red"
+                            app:boxStrokeWidth="2dp"
+                            app:cursorColor="@color/light_black"
+                            app:errorTextColor="@color/red"
+                            app:hintAnimationEnabled="true"
+                            app:hintTextColor="@color/light_black"
+                            app:placeholderTextColor="@color/light_black"
+                            app:shapeAppearanceOverlay="@style/cut_style"
+                            app:startIconMinSize="24dp"
+                            app:startIconScaleType="centerCrop">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etAddEmpID"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_badge_24"
+                                    android:drawablePadding="5dp"
+                                    android:focusable="false"
+                                    android:clickable="true"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="none"
+                                    android:editable="false"
+                                    android:textColor="@color/light_black" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAddGender"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="57dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:textColorHint="@color/light_black"
+                            app:boxStrokeColor="@color/blue"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/light_black"
+                            app:hintTextAppearance="@color/light_black"
+                            app:hintTextColor="@color/light_black"
+                            app:shapeAppearanceOverlay="@style/cut_style">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/autoCompleteAddEmpGender"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="2dp"
+                                    android:backgroundTint="@color/white"
+                                    android:contextClickable="true"
+                                    android:drawablePadding="5dp"
+                                    android:inputType="none"
+                                    android:drawableTint="@color/light_black"
+                                    android:drawableStart="@drawable/baseline_person_4_24"
+                                    android:text="Select Gender"
+                                    android:textColor="@color/light_black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAddEmppositionDepartment"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="57dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:textColorHint="@color/light_black"
+                            app:boxStrokeColor="@color/blue"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/light_black"
+                            app:hintTextAppearance="@color/light_black"
+                            app:hintTextColor="@color/light_black"
+                            app:shapeAppearanceOverlay="@style/cut_style">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/autoCompleteAddEmpDepartment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="2dp"
+                                    android:backgroundTint="@color/white"
+                                    android:contextClickable="true"
+                                    android:drawableStart="@drawable/baseline_apartment_24"
+                                    android:drawableTint="@color/light_black"
+                                    android:drawablePadding="5dp"
+                                    android:inputType="none"
+                                    android:text="Select Department"
+                                    android:textColor="@color/light_black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAddEmpposition"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="57dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:textColorHint="@color/light_black"
+                            app:boxStrokeColor="@color/blue"
+                            app:boxStrokeWidth="2dp"
+                            app:endIconTint="@color/light_black"
+                            app:hintTextAppearance="@color/light_black"
+                            app:hintTextColor="@color/light_black"
+                            app:shapeAppearanceOverlay="@style/cut_style">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/autoCompleteAddEmpPosition"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="2dp"
+                                    android:backgroundTint="@color/white"
+                                    android:contextClickable="true"
+                                    android:drawablePadding="5dp"
+                                    android:drawableStart="@drawable/baseline_bar_chart_24"
+                                    android:drawableTint="@color/light_black"
+                                    android:inputType="none"
+                                    android:text="Select Position"
+                                    android:textColor="@color/light_black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAddEmpDOB"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="0dp"
+                            android:backgroundTint="@color/white"
+                            android:foregroundTint="@color/white"
+                            android:gravity="center"
+                            android:hint="DOB (DD/MM/YYYY)"
+                            android:textColorHint="@color/light_black"
+                            app:boxStrokeColor="@color/blue"
+                            app:boxStrokeErrorColor="@color/red"
+                            app:boxStrokeWidth="2dp"
+                            app:cursorColor="@color/light_black"
+                            app:errorTextColor="@color/red"
+                            app:hintAnimationEnabled="true"
+                            app:hintTextColor="@color/light_black"
+                            app:placeholderTextColor="@color/light_black"
+                            app:shapeAppearanceOverlay="@style/cut_style"
+                            app:startIconMinSize="24dp"
+                            app:startIconScaleType="centerCrop">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etAddEmpDOB"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/white"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_calendar_month_24"
+                                    android:drawablePadding="5dp"
+                                    android:layout_marginBottom="2dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="date"
+                                    android:textColor="@color/light_black" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilAddEmpDOJ"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="0dp"
+                            android:backgroundTint="@color/white"
+                            android:foregroundTint="@color/white"
+                            android:gravity="center"
+                            android:hint="DOJ (DD/MM/YYYY)"
+                            android:textColorHint="@color/light_black"
+                            app:boxStrokeColor="@color/blue"
+                            app:boxStrokeErrorColor="@color/red"
+                            app:boxStrokeWidth="2dp"
+                            app:cursorColor="@color/bottom_bg_color"
+                            app:errorTextColor="@color/white"
+                            app:hintAnimationEnabled="true"
+                            app:hintTextColor="@color/light_black"
+                            app:placeholderTextColor="@color/light_black"
+                            app:shapeAppearanceOverlay="@style/cut_style"
+                            app:startIconMinSize="24dp"
+                            app:startIconScaleType="centerCrop">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etAddEmpDOJ"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/white"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_calendar_month_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/white"
+                                    android:inputType="date"
+                                    android:textColor="@color/light_black" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <!-- Content here-->
+                        <!-- Add more TextInputLayouts and other views as needed -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <ProgressBar
+                                    android:id="@+id/progressBar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/blue"
+                                    android:visibility="gone" />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnAddtoDB"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="35dp"
+                            android:background="@drawable/button_bg"
+                            android:elevation="10dp"
+                            android:text="Add to database"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue" />
+
+
+
+                        </LinearLayout>
+
+                </LinearLayout>
+        </ScrollView>
+
+
+        <!-- Bottom Navigation View -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/adminBottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:elevation="10dp"
+            app:elevation="10dp"
+            app:menu="@menu/admin_bottom_menu"
+            app:backgroundTint="@color/blue"
+            app:itemIconTint="@color/icon_color_change"
+            app:itemTextColor="@color/white"
+            app:itemActiveIndicatorStyle="@style/customstyleofactiveindicator"
+            app:itemTextAppearanceActive="@style/Widget.Material3.BottomNavigationView.ActiveIndicator"
+            app:itemHorizontalTranslationEnabled="true"
+            app:itemIconSize="24dp"
+            app:itemRippleColor="@color/white"
+            app:itemTextAppearanceActiveBoldEnabled="true"
+            app:labelVisibilityMode="unlabeled" />
+
+</RelativeLayout>

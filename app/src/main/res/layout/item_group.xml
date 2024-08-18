@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/settings_bgcolor"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="20dp"
+    android:layout_marginTop="25dp"
+    style="@style/Widget.Material3.CardView.Outlined">
+
+
+    <LinearLayout
+        android:id="@+id/listItemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="7dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/groupImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/sample_logo"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center"
+                    app:shapeAppearanceOverlay="@style/smooth"
+                    android:scaleType="centerCrop"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:fontFamily="@font/inter_bold"
+                            android:textStyle="bold"
+                            android:layout_marginStart="5dp"
+                            android:textSize="16sp"
+                            android:layout_marginTop="4dp"/>
+
+                        <TextView
+                            android:id="@+id/groupName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="GroupName"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:fontFamily="@font/inter_bold"
+                            android:textStyle="bold"
+                            android:layout_marginStart="5dp"
+                            android:textSize="16sp"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SalesHead: "
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:fontFamily="@font/inter_bold"
+                            android:textStyle="bold"
+                            android:layout_marginStart="5dp"
+                            android:textSize="16sp"
+                            android:layout_marginTop="4dp"/>
+
+                        <TextView
+                            android:id="@+id/groupCreatedBy"
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:text="Abdul"
+                            android:ellipsize="marquee"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:scrollHorizontally="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:fontFamily="@font/inter_bold"
+                            android:textStyle="bold"
+                            android:layout_marginStart="5dp"
+                            android:textSize="16sp"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" EmpId: "
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:fontFamily="@font/inter_bold"
+                            android:textStyle="bold"
+                            android:layout_marginStart="5dp"
+                            android:textSize="16sp"
+                            android:layout_marginTop="4dp"/>
+
+                        <TextView
+                            android:id="@+id/salesHeadEmpId"
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:text="AB77777"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:fontFamily="@font/inter_bold"
+                            android:textStyle="bold"
+                            android:layout_marginStart="5dp"
+                            android:textSize="16sp"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+<TextView
+    android:id="@+id/tvDeleteGroup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Delete Group"
+    android:textColor="@color/red"
+    android:textStyle="bold"
+    android:fontFamily="@font/inter_bold"
+    android:layout_gravity="center"
+    android:layout_marginTop="7dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>

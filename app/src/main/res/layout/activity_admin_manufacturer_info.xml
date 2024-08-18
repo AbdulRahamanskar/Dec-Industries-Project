@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/settings_bgcolor"
+    tools:context=".admin.AdminManufacturerInfo">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_manufacturerInfo"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue"
+        app:subtitle="Manufacturer Info"
+        app:subtitleTextColor="@color/white"
+        android:gravity="center_horizontal"
+        app:title=""
+
+        app:subtitleTextAppearance="@style/toolbarsubtitleTextStyle"
+
+        tools:ignore="NotSibling" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_above="@id/adminManufacturerInfoBottomNav"
+            android:layout_marginTop="47dp">
+<!--          Content and views here -->
+
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/containerActivities"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/adminManufacturerInfoBottomNav" />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/adminManufacturerInfoBottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:elevation="10dp"
+            android:elevation="10dp"
+            app:menu="@menu/admin_bottom_menu"
+            app:backgroundTint="@color/blue"
+            app:itemIconTint="@color/icon_color_change"
+            app:itemIconSize="24dp"
+            app:itemTextColor="@color/white"
+            app:itemActiveIndicatorStyle="@style/customstyleofactiveindicator"
+            app:itemTextAppearanceActive="@style/Widget.Material3.BottomNavigationView.ActiveIndicator"
+            app:itemHorizontalTranslationEnabled="true"
+            app:itemTextAppearanceActiveBoldEnabled="true"
+            app:itemRippleColor="@color/white"
+            app:labelVisibilityMode="unlabeled"
+
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".salesperson.SalesPersonProjects">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/white"
+        android:background="@color/white"
+        tools:listitem="@layout/salespersonlistview"
+        android:layout_below="@id/toolbarSalesPersonProjects"
+        android:layout_above="@id/salesPersonBottomProjects"
+        android:id="@+id/salesPersonProjectsListView"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSalesPersonProjects"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        android:layout_alignParentTop="true"
+        app:subtitle="Projects"
+        app:menu="@menu/salespersonnotifications"
+        android:layout_gravity="center"
+        app:subtitleTextColor="@color/white"
+        android:gravity="center_horizontal"
+        app:title=""
+        app:subtitleTextAppearance="@style/toolbarsubtitleTextStyle"
+        tools:ignore="NotSibling" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/salesPersonBottomProjects"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:elevation="10dp"
+        app:elevation="10dp"
+        app:menu="@menu/salesperson_bottommenu"
+        app:backgroundTint="@color/blue"
+        app:itemIconTint="@color/icon_color_change"
+        app:itemTextColor="@color/white"
+        app:itemActiveIndicatorStyle="@style/customstyleofactiveindicator"
+        app:itemTextAppearanceActive="@style/Widget.Material3.BottomNavigationView.ActiveIndicator"
+        app:itemHorizontalTranslationEnabled="true"
+        app:itemIconSize="24dp"
+        app:itemRippleColor="@color/white"
+        app:itemTextAppearanceActiveBoldEnabled="true"
+        app:labelVisibilityMode="unlabeled" />
+
+</RelativeLayout>
+</LinearLayout>

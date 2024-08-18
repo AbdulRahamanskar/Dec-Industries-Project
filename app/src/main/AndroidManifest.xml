@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logodec"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logodec"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProjectOne"
+        tools:targetApi="31">
+        <activity
+            android:name=".admin.AdminCreateOrderAccess"
+            android:exported="false" />
+        <activity
+            android:name=".admin.CompletedProjects"
+            android:exported="false" />
+        <activity
+            android:name=".admin.PendingProjects"
+            android:exported="false" />
+        <activity
+            android:name=".salesperson.RedirectUserprofile"
+            android:exported="false" />
+        <activity
+            android:name=".head.SalesHeadOrdersLists"
+            android:exported="false" />
+        <activity
+            android:name=".head.SalesHeadChangePassword"
+            android:exported="false" />
+        <activity
+            android:name=".head.SalesHeadWorkHistory"
+            android:exported="false" />
+        <activity
+            android:name=".head.SalesHeadFeedbackLists"
+            android:exported="false" />
+        <activity
+            android:name=".head.SalesHeadFeedback"
+            android:exported="false" />
+        <activity
+            android:name=".salesperson.OrderDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".manufacturer.ManufacturerNotifications"
+            android:exported="false" />
+        <activity
+            android:name=".head.SalesHeadCreateGroup"
+            android:exported="false" />
+        <activity
+            android:name=".head.SalesHeadDisplayGroups"
+            android:exported="false" />
+        <activity
+            android:name=".head.SalesHeadNotifications"
+            android:exported="false" />
+        <activity
+            android:name=".head.SalesHeadCreateSalesPersonTeam"
+            android:exported="false" />
+        <activity
+            android:name=".head.SalesHeadEditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".admin.RedirectClientProfile"
+            android:exported="false" />
+        <activity
+            android:name=".ImagePreviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".manufacturer.ManufacturerEditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".manufacturer.ManufacturerChangePassword"
+            android:exported="false" />
+        <activity
+            android:name=".manufacturer.ManufacturingFeedbackLists"
+            android:exported="false" />
+        <activity
+            android:name=".manufacturer.ManufacturingFeedback"
+            android:exported="false" />
+        <activity
+            android:name=".manufacturer.ManufacturingHistory"
+            android:exported="false" />
+        <activity
+            android:name=".manufacturer.ManufacturingOrderList"
+            android:exported="false" />
+        <activity
+            android:name=".manufacturer.ManufacturingTeamList"
+            android:exported="false" />
+        <activity
+            android:name=".manufacturer.ManufacturingAddTeam"
+            android:exported="false" />
+        <activity
+            android:name=".manufacturer.ManufacturerSettings"
+            android:exported="false" />
+        <activity
+            android:name=".head.SalesHeadSettings"
+            android:exported="false" />
+        <activity
+            android:name=".manufacturer.ManufacturerProjects"
+            android:exported="false" />
+        <activity
+            android:name=".head.SalesHeadProfile"
+            android:exported="false" />
+        <activity
+            android:name=".head.SalesHeadProjects"
+            android:exported="false" />
+        <activity
+            android:name=".client.ClientChangePassword"
+            android:exported="false" />
+        <activity
+            android:name=".client.ClientFeedbackLists"
+            android:exported="false" />
+        <activity
+            android:name=".client.ClientProjects"
+            android:exported="false" />
+        <activity
+            android:name=".client.ClientSettings"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminWorkHistory"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminProjects"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminFeedbackLists"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminOrdersList"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminChangePassword"
+            android:exported="false" />
+        <activity
+            android:name=".client.ClientEditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".client.ClientFeedbackForm"
+            android:exported="false" />
+        <activity
+            android:name=".client.ClientTracking"
+            android:exported="false" />
+        <activity
+            android:name=".client.ClientHistory"
+            android:exported="false" />
+        <activity
+            android:name=".client.ClientOrderList"
+            android:exported="false" />
+        <activity
+            android:name=".salesperson.SalesPersonNotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminNotifications"
+            android:exported="false" />
+        <activity
+            android:name=".AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TermsAndConditionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".salesperson.SalesPersonEditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".salesperson.SalesPersonChangePassword"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminEditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".salesperson.SalesPersonFeedbackLists"
+            android:exported="false" />
+        <activity
+            android:name=".salesperson.SalesPersonMoreSettings"
+            android:exported="false" />
+        <activity
+            android:name=".salesperson.SalesPersonHistory"
+            android:exported="false" />
+        <activity
+            android:name=".salesperson.SalesPersonFeedbackForm"
+            android:exported="false" />
+        <activity
+            android:name=".salesperson.SalesPersonSalesTarget"
+            android:exported="false" />
+        <activity
+            android:name=".salesperson.SalesPersonProjects"
+            android:exported="false" />
+        <activity
+            android:name=".salesperson.SalesPersonOrderList"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminHeadsUsersLists"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminClientsUsersLists"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminSalesPersonsUsersLists"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminManufacturersUserLists"
+            android:exported="false" />
+        <activity
+            android:name=".salesperson.SalesPersonCreateOrder"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".client.ClientProfile"
+            android:exported="false" />
+        <activity
+            android:name=".manufacturer.ManufacturerProfile"
+            android:exported="false" />
+        <activity
+            android:name=".salesperson.SalesPersonProfile"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminAddEmployees"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".OnBoardingScreen"
+            android:exported="false" />
+        <activity
+            android:name=".LoginScreen"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".ClientRegistration"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminMoreSettings"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".admin.AdminOngoingProjects"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".admin.AdminManufacturerInfo"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".admin.AdminProfile"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

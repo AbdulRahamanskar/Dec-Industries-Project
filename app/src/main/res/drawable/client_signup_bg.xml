@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Define corners with varying radii -->
+    <corners
+        android:topLeftRadius="0dp"
+        android:topRightRadius="150dp"
+        android:bottomLeftRadius="150dp"
+        android:bottomRightRadius="0dp"
+        />
+
+    <!-- Define gradient with the same colors and angle -->
+    <gradient
+        android:startColor="#085FBD"
+        android:endColor="#AA00FF"
+        android:angle="90" />
+
+    <!-- Add stroke with custom width and color -->
+    <stroke
+        android:width="5dp"
+        android:color="@color/blue" />
+
+
+</shape>
+
+
+<!--<gradient-->
+<!--android:startColor="#FF4081"-->
+<!--android:endColor="#3F51B5"-->
+<!--android:angle="90" />-->

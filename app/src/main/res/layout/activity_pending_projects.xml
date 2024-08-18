@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.PendingProjects"
+    android:background="@color/white"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarPendingProjects"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        app:title=""
+        app:subtitle="Pending Projects"
+        app:subtitleTextColor="@color/white"
+        app:subtitleTextAppearance="@style/toolbarsubtitleTextStyle"
+        android:layout_alignParentTop="true" />
+    <ListView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarPendingProjects"
+        android:divider="@color/white"
+        tools:listitem="@layout/update_order_status_list"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        android:id="@+id/adminOrderStatusUpdateListView"/>
+
+
+</RelativeLayout>

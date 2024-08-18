@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/settings_bgcolor"
+    tools:context=".client.ClientProjects">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarClientProject"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        app:subtitle="Projects"
+        android:layout_gravity="center"
+        app:subtitleTextColor="@color/white"
+        android:gravity="center_horizontal"
+        app:title=""
+        app:subtitleTextAppearance="@style/toolbarsubtitleTextStyle"
+        />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/clientProjectBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:elevation="10dp"
+        app:elevation="10dp"
+        app:menu="@menu/client_bottommenu"
+        app:backgroundTint="@color/blue"
+        app:itemIconTint="@color/icon_color_change"
+        app:itemTextColor="@color/white"
+        app:itemActiveIndicatorStyle="@style/customstyleofactiveindicator"
+        app:itemTextAppearanceActive="@style/Widget.Material3.BottomNavigationView.ActiveIndicator"
+        app:itemHorizontalTranslationEnabled="true"
+        app:itemIconSize="24dp"
+        app:itemRippleColor="@color/white"
+        app:itemTextAppearanceActiveBoldEnabled="true"
+        app:labelVisibilityMode="unlabeled" />
+        <ListView
+            android:background="@color/white"
+            android:id="@+id/clientHomeListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/salespersonlistview"
+            android:divider="@color/settings_bgcolor"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="none"
+            android:layout_below="@id/toolbarClientProject"
+            android:layout_above="@id/clientProjectBottom"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    android:background="@color/settings_bgcolor"
+    tools:context=".manufacturer.ManufacturerEditProfile">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_Manufacurer_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue"
+        app:subtitle="Edit Profile"
+        app:subtitleTextAppearance="@style/toolbarsubtitleTextStyle"
+        app:subtitleTextColor="@color/white"
+        app:title="" />
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        android:layout_below="@id/toolbar_Manufacurer_edit_profile">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardviewManufacurerprofile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="5dp"
+                android:layout_margin="9dp"
+                app:cardCornerRadius="20dp">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbarStyle="outsideOverlay"
+
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="center">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/manufacturerEditProfileImage"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:layout_margin="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/sample_logo"
+                                android:layout_gravity="center"
+                                app:shapeAppearanceOverlay="@style/smooth"/>
+
+
+
+
+
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Click on profile photo to add new photo"
+                            android:layout_marginBottom="3dp"
+                            android:fontFamily="@font/inter_bold"
+                            android:layout_gravity="center"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilEditManufacurerFullName"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:hint="Full Name"
+                                android:textColorHint="@color/light_black"
+                                android:transitionName="transition_email"
+                                app:boxStrokeColor="@color/blue"
+                                app:boxStrokeErrorColor="@color/red"
+                                app:boxStrokeWidth="2dp"
+                                app:cursorColor="@color/light_black"
+                                app:errorTextColor="@color/white"
+                                app:hintAnimationEnabled="true"
+                                app:hintTextColor="@color/light_black"
+                                app:placeholderTextColor="@color/light_black"
+                                app:shapeAppearanceOverlay="@style/cut_style"
+                                app:startIconMinSize="24dp"
+                                app:startIconScaleType="centerCrop">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etEditManufacurerFullName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_person_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="textPersonName"
+                                    android:textColor="@color/light_black" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilEditManufacurerEmail"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:hint="Email"
+                                android:textColorHint="@color/light_black"
+                                android:transitionName="transition_email"
+                                app:boxStrokeColor="@color/blue"
+                                app:boxStrokeErrorColor="@color/red"
+                                app:boxStrokeWidth="2dp"
+                                app:cursorColor="@color/light_black"
+                                app:errorTextColor="@color/white"
+                                app:hintAnimationEnabled="true"
+                                app:hintTextColor="@color/light_black"
+                                app:placeholderTextColor="@color/light_black"
+                                app:shapeAppearanceOverlay="@style/cut_style"
+                                app:startIconMinSize="24dp"
+                                app:startIconScaleType="centerCrop">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etEditManufacurerEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_email_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="textEmailAddress"
+                                    android:textColor="@color/light_black" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilEditManufacurerMobileNumber"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:hint="Mobile number"
+                                android:textColorHint="@color/light_black"
+                                android:transitionName="transition_email"
+                                app:boxStrokeColor="@color/blue"
+                                app:boxStrokeErrorColor="@color/red"
+                                app:boxStrokeWidth="2dp"
+                                app:cursorColor="@color/light_black"
+                                app:errorTextColor="@color/white"
+                                app:hintAnimationEnabled="true"
+                                app:hintTextColor="@color/light_black"
+                                app:placeholderTextColor="@color/light_black"
+                                app:shapeAppearanceOverlay="@style/cut_style"
+                                app:startIconMinSize="24dp"
+                                app:startIconScaleType="centerCrop"
+                                app:prefixText="+91 "
+                                app:prefixTextColor="@color/light_black"
+                                app:prefixTextAppearance="@color/light_black"
+                                app:counterMaxLength="10"
+                                app:counterOverflowTextAppearance="@color/red"
+                                app:counterOverflowTextColor="@color/red"
+                                app:counterTextColor="@color/light_black"
+                                app:counterTextAppearance="@color/light_black"
+                                app:counterEnabled="true">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etEditManufacurerMobileNumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_smartphone_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="number"
+                                    android:textColor="@color/light_black" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilEditManufacurerLinkedIn"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:hint="Linked In"
+                                android:textColorHint="@color/light_black"
+                                android:transitionName="transition_email"
+                                app:boxStrokeColor="@color/blue"
+                                app:boxStrokeErrorColor="@color/red"
+                                app:boxStrokeWidth="2dp"
+                                app:cursorColor="@color/light_black"
+                                app:errorTextColor="@color/white"
+                                app:hintAnimationEnabled="true"
+                                app:hintTextColor="@color/light_black"
+                                app:placeholderTextColor="@color/light_black"
+                                app:shapeAppearanceOverlay="@style/cut_style"
+                                app:startIconScaleType="centerCrop">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etEditManufacurerLinkedIn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/linkedin_24_freepik"
+                                    android:drawablePadding="5dp"
+                                    android:inputType="textUri"
+                                    android:textColor="@color/light_black" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilEditManufacurerCompanyName"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:hint="Company Name"
+                                android:textColorHint="@color/light_black"
+                                android:transitionName="transition_email"
+                                app:boxStrokeColor="@color/blue"
+                                app:boxStrokeErrorColor="@color/red"
+                                app:boxStrokeWidth="2dp"
+                                app:cursorColor="@color/light_black"
+                                app:errorTextColor="@color/white"
+                                app:hintAnimationEnabled="true"
+                                app:hintTextColor="@color/light_black"
+                                app:placeholderTextColor="@color/light_black"
+                                app:shapeAppearanceOverlay="@style/cut_style"
+                                app:startIconMinSize="24dp"
+                                app:startIconScaleType="centerCrop">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etEditManufacurerCompanyName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_apartment_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="text"
+                                    android:textColor="@color/light_black" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilEditManufacurerCompanyRegion"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:hint="Company Region"
+                                android:textColorHint="@color/light_black"
+                                android:transitionName="transition_email"
+                                app:boxStrokeColor="@color/blue"
+                                app:boxStrokeErrorColor="@color/red"
+                                app:boxStrokeWidth="2dp"
+                                app:cursorColor="@color/light_black"
+                                app:errorTextColor="@color/white"
+                                app:hintAnimationEnabled="true"
+                                app:hintTextColor="@color/light_black"
+                                app:placeholderTextColor="@color/light_black"
+                                app:shapeAppearanceOverlay="@style/cut_style"
+                                app:startIconMinSize="24dp"
+                                app:startIconScaleType="centerCrop"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etEditManufacurerCompanyRegion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_location_on_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="text"
+                                    android:textColor="@color/light_black" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilEditManufacurerExperience"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:hint="Experience"
+                                android:textColorHint="@color/light_black"
+                                android:transitionName="transition_email"
+                                app:boxStrokeColor="@color/blue"
+                                app:boxStrokeErrorColor="@color/red"
+                                app:boxStrokeWidth="2dp"
+                                app:cursorColor="@color/light_black"
+                                app:errorTextColor="@color/white"
+                                app:hintAnimationEnabled="true"
+                                app:hintTextColor="@color/light_black"
+                                app:placeholderTextColor="@color/light_black"
+                                app:shapeAppearanceOverlay="@style/cut_style"
+                                app:startIconMinSize="24dp"
+                                app:startIconScaleType="centerCrop"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etEditManufacurerExperience"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_workspace_premium_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="number"
+                                    android:textColor="@color/light_black" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilEditManufacurerHighestQualification"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:hint="Highest Qualification"
+                                android:textColorHint="@color/light_black"
+                                android:transitionName="transition_email"
+                                app:boxStrokeColor="@color/blue"
+                                app:boxStrokeErrorColor="@color/red"
+                                app:boxStrokeWidth="2dp"
+                                app:cursorColor="@color/light_black"
+                                app:errorTextColor="@color/white"
+                                app:hintAnimationEnabled="true"
+                                app:hintTextColor="@color/light_black"
+                                app:placeholderTextColor="@color/light_black"
+                                app:shapeAppearanceOverlay="@style/cut_style"
+                                app:startIconMinSize="24dp"
+                                app:startIconScaleType="centerCrop"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etEditManufacurerHighestQualification"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_school_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="text"
+                                    android:textColor="@color/light_black" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilEditManufacurerLanguaguesKnown"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:hint="Languagues Known"
+                                android:textColorHint="@color/light_black"
+                                android:transitionName="transition_email"
+                                app:boxStrokeColor="@color/blue"
+                                app:boxStrokeErrorColor="@color/red"
+                                app:boxStrokeWidth="2dp"
+                                app:cursorColor="@color/light_black"
+                                app:errorTextColor="@color/white"
+                                app:hintAnimationEnabled="true"
+                                app:hintTextColor="@color/light_black"
+                                app:placeholderTextColor="@color/light_black"
+                                app:shapeAppearanceOverlay="@style/cut_style"
+                                app:startIconMinSize="24dp"
+                                app:startIconScaleType="centerCrop"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etEditManufacurerLanguaguesKnown"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_language_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="text"
+                                    android:textColor="@color/light_black" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilEditManufacurerSkills"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:hint="Skills"
+                                android:textColorHint="@color/light_black"
+                                android:transitionName="transition_email"
+                                app:boxStrokeColor="@color/blue"
+                                app:boxStrokeErrorColor="@color/red"
+                                app:boxStrokeWidth="2dp"
+                                app:cursorColor="@color/light_black"
+                                app:errorTextColor="@color/white"
+                                app:hintAnimationEnabled="true"
+                                app:hintTextColor="@color/light_black"
+                                app:placeholderTextColor="@color/light_black"
+                                app:shapeAppearanceOverlay="@style/cut_style"
+                                app:startIconMinSize="24dp"
+                                app:startIconScaleType="centerCrop"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etEditManufacurerSkills"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_rocket_launch_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="text"
+                                    android:textColor="@color/light_black" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilEditManufacurerManPowerAvailable"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:hint="Man Power Available"
+                                app:helperText="Like 20K, 30k People Available"
+                                app:helperTextEnabled="true"
+                                android:textColorHint="@color/light_black"
+                                android:transitionName="transition_email"
+                                app:boxStrokeColor="@color/blue"
+                                app:boxStrokeErrorColor="@color/red"
+                                app:boxStrokeWidth="2dp"
+                                app:cursorColor="@color/light_black"
+                                app:errorTextColor="@color/white"
+                                app:hintAnimationEnabled="true"
+                                app:hintTextColor="@color/light_black"
+                                app:placeholderTextColor="@color/light_black"
+                                app:shapeAppearanceOverlay="@style/cut_style"
+                                app:startIconMinSize="24dp"
+                                app:startIconScaleType="centerCrop"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etEditManufacurerManPowerAvailable"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_people_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="text"
+                                    android:textColor="@color/light_black" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilEditManufacurerMachineResource"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:hint="Machine Resource"
+                                app:helperText="Types of Machines"
+                                app:helperTextEnabled="true"
+                                android:textColorHint="@color/light_black"
+                                android:transitionName="transition_email"
+                                app:boxStrokeColor="@color/blue"
+                                app:boxStrokeErrorColor="@color/red"
+                                app:boxStrokeWidth="2dp"
+                                app:cursorColor="@color/light_black"
+                                app:errorTextColor="@color/white"
+                                app:hintAnimationEnabled="true"
+                                app:hintTextColor="@color/light_black"
+                                app:placeholderTextColor="@color/light_black"
+                                app:shapeAppearanceOverlay="@style/cut_style"
+                                app:startIconMinSize="24dp"
+                                app:startIconScaleType="centerCrop"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etEditManufacurerMachineResource"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_precision_manufacturing_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="text"
+                                    android:textColor="@color/light_black" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tilEditManufacurerBudgetEstTools"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:hint="Budget Estimation tools"
+                                app:helperText="Budget Estimation Tools/Software Used"
+                                app:helperTextEnabled="true"
+                                android:textColorHint="@color/light_black"
+                                android:transitionName="transition_email"
+                                app:boxStrokeColor="@color/blue"
+                                app:boxStrokeErrorColor="@color/red"
+                                app:boxStrokeWidth="2dp"
+                                app:cursorColor="@color/light_black"
+                                app:errorTextColor="@color/white"
+                                app:hintAnimationEnabled="true"
+                                app:hintTextColor="@color/light_black"
+                                app:placeholderTextColor="@color/light_black"
+                                app:shapeAppearanceOverlay="@style/cut_style"
+                                app:startIconMinSize="24dp"
+                                app:startIconScaleType="centerCrop"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etEditManufacurerBudgetEstTools"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="@color/light_black"
+                                    android:cursorVisible="true"
+                                    android:drawableStart="@drawable/baseline_precision_manufacturing_24"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/light_black"
+                                    android:foregroundTint="@color/light_black"
+                                    android:inputType="text"
+                                    android:textColor="@color/light_black" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/updateManufacturerProfileButton"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Update"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:background="@drawable/button_bg"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/blue"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="10dp"
+                            android:textStyle="bold"/>
+
+
+
+
+
+
+
+
+
+                    </LinearLayout>
+                </ScrollView>
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

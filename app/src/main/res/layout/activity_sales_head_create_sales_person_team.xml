@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/settings_bgcolor"
+    tools:context=".head.SalesHeadCreateSalesPersonTeam">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSalesHeadCreateTeams"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        android:layout_alignParentTop="true"
+        app:subtitle="Create Team"
+        app:subtitleTextColor="@color/white"
+        android:gravity="center_horizontal"
+        app:title=""
+        app:subtitleTextAppearance="@style/toolbarsubtitleTextStyle" />
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbarSalesHeadCreateTeams"
+        android:layout_margin="5dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilSearchSalesPersonsToAddInTeam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconTint="@color/black"
+            app:endIconCheckable="true"
+            app:endIconMode="clear_text"
+            app:boxStrokeColor="@color/blue"
+            app:boxStrokeWidth="2dp"
+            app:shapeAppearanceOverlay="@style/cut_style"
+            android:textColorHint="@color/black"
+            app:boxStrokeWidthFocused="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietSearchSalesPersonsToAddInTeam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSearch"
+                android:drawableTint="@color/black"
+                android:textColor="@color/black"
+                android:hint="Search"
+                android:fontFamily="@font/inter_bold"
+                android:drawablePadding="5dp"
+                android:inputType="text"
+                android:drawableStart="@drawable/baseline_person_search_24" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvSelectSalesPerson"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchLayout"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="7dp"
+        android:divider="@color/transparent"
+        android:dividerHeight="10dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        tools:listitem="@layout/selectsalespersonstocreateinteam" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCreateGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/blue"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/baseline_arrow_forward_ios_24"
+        app:tint="@color/white" />
+
+</RelativeLayout>

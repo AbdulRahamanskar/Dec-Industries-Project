@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <!-- This layer simulates the frosted glass effect -->
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="90"
+                android:startColor="#80FFFFFF"
+            android:endColor="#80FFFFFF"
+            android:type="linear"/>
+            <corners android:radius="24dp"/>  <!-- Match your CardView corner radius -->
+            <padding
+                android:left="16dp"
+                android:top="16dp"
+                android:right="16dp"
+                android:bottom="16dp"/>
+        </shape>
+    </item>
+    <item>
+        <!-- Optional: Add a border layer if desired -->
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="2dp"
+                android:color="#E0E0E0"/>  <!-- Light gray border -->
+            <corners android:radius="24dp"/>  <!-- Match your CardView corner radius -->
+        </shape>
+    </item>
+</layer-list>

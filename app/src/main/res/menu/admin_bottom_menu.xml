@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title=""
+        android:id="@+id/adminOngoingProjectsMenu"
+        android:icon="@drawable/baseline_computer_24"/>
+
+    <item android:title=""
+        android:id="@+id/adminaddAddEmployeesMenu"
+        android:icon="@drawable/baseline_person_add_24"/>
+
+    <item android:title=""
+        android:id="@+id/adminManufactringInfoMenu"
+        android:icon="@drawable/baseline_precision_manufacturing_24"/>
+
+    <item android:title=""
+        android:id="@+id/adminProfileMenu"
+        android:icon="@drawable/baseline_account_circle_24"/>
+
+    <item android:title=""
+        android:id="@+id/adminMoreMenu"
+        android:icon="@drawable/baseline_settings_24"/>
+
+</menu>

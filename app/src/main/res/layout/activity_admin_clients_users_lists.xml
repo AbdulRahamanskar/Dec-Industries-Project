@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.AdminClientsUsersLists"
+    android:orientation="vertical"
+    android:background="@color/settings_bgcolor">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarClientUsersLists"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        app:title=""
+        app:subtitle="Clients Users Lists"
+        app:subtitleTextColor="@color/white"
+        app:subtitleTextAppearance="@style/toolbarsubtitleTextStyle"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconTint="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:boxStrokeColor="@color/blue"
+            app:endIconCheckable="true"
+            app:endIconMode="clear_text"
+            app:boxStrokeWidth="2dp"
+            app:shapeAppearanceOverlay="@style/cut_style"
+            android:textColorHint="@color/black"
+            app:boxStrokeWidthFocused="2dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchClientsTIET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSearch"
+                android:drawableTint="@color/black"
+                android:textColor="@color/black"
+                android:hint="Search"
+                android:fontFamily="@font/inter_bold"
+                android:drawablePadding="5dp"
+                android:inputType="text"
+                android:drawableStart="@drawable/baseline_person_search_24"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/adminClientListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="none"
+            tools:listitem="@layout/adminclientuserslist" />
+    </RelativeLayout>
+
+</LinearLayout>
